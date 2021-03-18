@@ -1,0 +1,569 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+/* Settings */
+/* Tools */
+/* Generic */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Elements */
+html {
+  min-height: 100%;
+  background-color: #424242;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+p, span, a, label {
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+img, input, svg, div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: none;
+}
+
+/* layout */
+.l-container {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0 15px;
+}
+
+.l-contain {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media screen and (min-width: 500px) {
+  .l-container {
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .l-container {
+    padding: 0 40px;
+  }
+}
+
+.l-CardBox {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 20px 0;
+}
+
+@media screen and (min-width: 600px) {
+  .l-CardBox {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .l-CardBox {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .l-CardBox {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* Scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px #616161;
+  box-shadow: inset 0 0 5px #616161;
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #686868;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #464646;
+}
+
+.ModalCharge {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ModalCharge i {
+  color: #FFFFFF;
+}
+
+/* Components */
+.Nav {
+  background-color: #303030;
+  height: 70px;
+}
+
+.Nav .l-contain {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Nav__Logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Nav__Logo img {
+  width: 40px;
+  margin-right: 8px;
+}
+
+.Nav__Logo p {
+  font-size: 24px;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.Nav__Button {
+  width: 120px;
+  height: 40px;
+  background-color: #2196F3;
+  border-radius: 5px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.Nav__Button i {
+  color: #FFFFFF;
+  margin-left: 4px;
+}
+
+.Nav__Button:hover {
+  background-color: #56c9ff;
+}
+
+.Form {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.Form__Title {
+  font-weight: bold;
+  font-size: 28px;
+  color: #FFFFFF;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.Form form {
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.Form__Img {
+  width: 264px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #FFFFFF;
+  margin: 0 auto 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Form__Img img {
+  width: 100%;
+}
+
+.Form__Input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 17px;
+}
+
+.Form__Type {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 50px;
+      grid-template-columns: 1fr 50px;
+  -ms-grid-rows: 50px;
+      grid-template-rows: 50px;
+  margin-bottom: 17px;
+  grid-gap: 10px;
+}
+
+.Form__Type-Add, .Form__Type-Delete {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  cursor: pointer;
+}
+
+.Form__Type-Add i, .Form__Type-Delete i {
+  color: #FFFFFF;
+}
+
+.Form__Type-Delete:hover {
+  background-color: #E61E62;
+}
+
+.Form__Type-Add:hover {
+  background: #2196F3;
+}
+
+.Form input[type="submit"] {
+  width: 100%;
+  display: block;
+  max-width: 285px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #2196F3;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  cursor: pointer;
+}
+
+.Form input[type="submit"]:hover {
+  background-color: #56c9ff;
+}
+
+.Form__ButtonImg {
+  width: 160px;
+  height: 50px;
+  position: relative;
+  margin: 0 auto 20px;
+}
+
+.Form__ButtonImg input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.Form__ButtonImg input:hover ~ button {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.Form__ButtonImg button {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 1px solid #FFFFFF;
+  background: none;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.Form__ButtonImg button i {
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 500px) {
+  .Form__Title {
+    font-size: 36px;
+    text-align: left;
+  }
+}
+
+.Card {
+  width: 100%;
+  -webkit-box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 4px 5px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.Card__Edit, .Card__Delete {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  cursor: pointer;
+}
+
+.Card__Edit:hover, .Card__Delete:hover {
+  -webkit-transform: scale(1.1) rotate(5deg);
+          transform: scale(1.1) rotate(5deg);
+}
+
+.Card__Edit i, .Card__Delete i {
+  color: #FFFFFF;
+}
+
+.Card__Edit {
+  right: 10px;
+  background-color: #2196F3;
+}
+
+.Card__Delete {
+  left: 10px;
+  background-color: #E61E62;
+}
+
+.Card__Name {
+  display: block;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.Card__Img {
+  width: 100%;
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4px;
+}
+
+.Card__Img img {
+  width: 100%;
+}
+
+.Card__Subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.Card__Info {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.Card__Info-Item {
+  padding: 10px;
+  border-bottom: 0.5px solid #BABABA;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 15px;
+}
+
+.Card__Info-Item:last-child {
+  border-bottom: none;
+}
+
+.Card__Info-Key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2196F3;
+}
+
+.Card__Info-Value p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #303030;
+}
+/*# sourceMappingURL=index.css.map */
